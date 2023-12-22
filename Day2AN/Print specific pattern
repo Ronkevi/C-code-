@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        // Print even numbers
+        if (i % 2 == 0) {
+            printf("%d, ", i * 2);
+        }
+
+        // Print odd numbers
+        else {
+            printf("%d, ", i * 2 - 1);
+        }
+    }
+
+    printf("\n");
+
+    return 0;
+}
