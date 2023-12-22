@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    char input[100];
+    printf("Enter input string: ");
+    scanf("%s", input);
+
+    char output[100];
+    int i = 0, j = 0;
+
+    while (input[i] != '\0') {
+        char character = input[i];
+        i++;
+
+        int count = 0;
+        while (input[i] >= '0' && input[i] <= '9') {
+            count = count * 10 + (input[i] - '0');
+            i++;
+        }
+
+        for (int k = 0; k < count; k++) {
+            output[j] = character;
+            j++;
+        }
+    }
+
+    output[j] = '\0';
+
+    printf("Output: %s\n", output);
+
+    return 0;
+}
